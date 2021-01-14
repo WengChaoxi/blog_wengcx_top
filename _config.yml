@@ -1,0 +1,114 @@
+#
+# Hexo 配置
+#
+
+# 网站
+title: 公羽向阳
+subtitle: ''
+description: ''
+keywords:
+author: 公羽向阳
+language: zh-CN
+timezone: ''
+
+# 网址
+## 如果网站放在子目录中, 设置url为'http://example.com/child'且root设置为'/child/'
+url: https://blog.wengcx.top
+root: /
+## 永久链接地址格式
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+## 改写permalink的值来美化url
+pretty_urls:
+  ### 是否在永久链接中保留尾部的index.html,设置为false时去除
+  trailing_index: true
+  ### 是否在永久链接中保留尾部的.html,设置为false时去除
+  trailing_html: true
+
+# 目录
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# 文章
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+
+## 代码块设置
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# 主页设置
+## path: 索引页根路径(default = '')
+## per_page: 每页显示的文章数(为0时禁用分页)
+## order_by: 发布文章排序(默认为-date,即按时间降序)
+index_generator:
+  path: ''
+  per_page: 9
+  order_by: -date
+
+# 分类和标签
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# 日期/时间格式
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# 分页
+## 可将per_page设置为0来禁用分页
+per_page: 9
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# 扩展
+## 插件: https://hexo.io/plugins/
+## 主题: https://hexo.io/themes/
+
+## 当前主题名称,值为false时可禁用主题(默认 theme: landscape)
+theme: hexo-theme-Chic
+
+# 部署
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: ''

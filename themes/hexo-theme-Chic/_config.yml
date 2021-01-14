@@ -1,0 +1,91 @@
+#
+# 主题的配置
+#
+
+# 名称
+navname: 公羽向阳's Blog
+
+# 导航栏目
+nav:
+  归档: /archives
+  分类: /categories
+  标签: /tags
+  关于: /about
+
+# 网站图标
+favicon: /favicon.ico
+
+# 简况
+nickname: 公羽向阳
+## 这个变量为 MarkDown 的格式.
+description: '**软件工程专业学生** <br>*IT从业者*'
+avatar: /image/avatar.jpg
+
+## 链接关键字不可更改。
+## 完成关键字后的网址。
+## 可以注释掉未使用的键。
+links:
+  Blog: /archives
+  Link: http://csdn.wengcx.top
+  QQ: /
+  Github: https://github.com/WengChaoxi
+  # Weibo:
+  # RSS:
+  # AliPay:
+  
+# 上面链接的显示方式：文本或图标。
+links_text_enable: false
+links_icon_enable: true
+
+
+# 文章页面
+## 文章信息
+post_meta_enable: true
+
+post_author_enable: true
+post_date_enable: true
+post_category_enable: true
+
+## 版权声明
+post_copyright_enable: true
+
+post_copyright_author_enable: true
+post_copyright_permalink_enable: false # 永久链接
+post_copyright_license_enable: true
+post_copyright_license_text: Copyright (c) 2021 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
+post_copyright_slogan_enable: false
+post_copyright_slogan_text: 江海所以能为百谷王者，以其善下之~
+
+## 目录
+post_toc_enable: true
+
+# 页面
+page_title_enable: true
+
+# 日期/时间格式
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD # MMMM D, YYYY
+time_format: H:mm:ss
+
+# stylesheets loaded in the <head>
+stylesheets:
+  - /css/style.css
+
+# scripts loaded in the end of the body
+scripts:
+  - /js/script.js
+  - /js/tocbot.min.js
+    # tscanlin/tocbot: Build a table of contents from headings in an HTML document.
+    # https://github.com/tscanlin/tocbot
+
+
+# plugin functions
+## Mathjax: Math Formula Support
+## https://www.mathjax.org
+mathjax:
+  enable: true
+  import: demand # global or demand
+  ## global: all pages will load mathjax,this will degrade performance and some grammers may be parsed wrong.
+  ## demand: Recommend option,if your post need fomula, you can declare 'mathjax: true' in Front-matter

@@ -1,0 +1,40 @@
+<div class="container" onselectstart="return false;">
+    <div class="intro">
+        <div class="avatar">
+            <a href="<%- url_for(theme.nav.Posts) %>"><img src="<%- url_for(theme.avatar) %>"></a>
+        </div>
+        <div class="nickname"><%- theme.nickname %></div>
+        <div class="description"><%- markdown(theme.description) %></div>
+        <div class="links">
+            <% if(theme.links !== undefined){ %>
+                <% for(var key in theme.links){ %>
+                    <% var qq = "";%>
+                    <% if(key.toLowerCase()==="qq"){ %>
+                        <% qq = "id=qq";%>
+                    <%}%>
+                    
+                    <a <%= qq%> class="link-item" title="<%- key %>" href="<%= theme.links[key] %>">
+                        <% if(theme.links_text_enable) { %>
+                            <%= key %>
+                        <%}%>
+                        <%if(theme.links_icon_enable){ %>
+                            <i class="iconfont icon-<%- key.toLowerCase() %>"></i>
+                        <%}%>
+                    </a>
+                <% } %>
+                
+                <script type="text/javascript">
+                    var link = "/";
+                    try{
+                        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                            link = "mqqwpa://im/chat?chat_type=wpa&uin=352120190&version=1&src_type=web&web_src=badcatu.com";
+                        }else{
+                            link = "tencent://message/?uin=352120190&Site=im.qq.com&Menu=yes";
+                        }
+                    }catch(e){}
+                    document.getElementById("qq").href = link;
+                </script>
+            <% } %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<%#
+
+分类页面
+
+如果你进入'分类'页点击链接将显示所有类别。
+否则，如果您输入'分类'点击后标题链接将显示这个职位的单一类别。
+
+添加分类页面方法:
+> hexo new page "category"
+> vim source/category/index.md
+> 
+    ---
+    title: '''category'''
+    date: 2021-01-14 20:39:00
+    layout: category
+    ---
+%>
+
+<% if(is_category()){ %>
+    <%- partial('_page/category', {pagination: config.category, index: true}) %>
+<% }else{ %>
+    <div class="container" onselectstart="return false;">
+        <div class="post-wrap categories">
+            <h2 class="post-title">-&nbsp;分类&nbsp;-</h2>
+            <div class="categories-card">
+                <% site.categories.forEach(category_item=>{ %>
+                    <div class="card-item">
+                        <div class="categories">
+                            <a href="<%- url_for(category_item.path) %>">
+                                <h3>
+                                    <i class="iconfont icon-category" style="padding-right:3px"></i>
+                                    <%- category_item.name %>
+                                </h3>
+                            </a>
+                            <% category_item.posts.forEach((post_item, index = 0)=>{ %>
+                                <% if(++index <= 5){ %>
+                                    <article class="archive-item">
+                                        <a class="archive-item-link"
+                                           href="<%- url_for(post_item.path) %>"><%- post_item.title %></a>
+                                    </article>
+                                <% } %>
+                            <% }) %>
+                            <% if(category_item.posts.length > 5){ %>
+                                <a class="more-post-link" href="<%- url_for(category_item.path) %>">更多 >></a>
+                            <% } %>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+<% } %>
