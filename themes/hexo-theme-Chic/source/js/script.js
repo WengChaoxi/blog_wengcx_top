@@ -1,3 +1,4 @@
+
 // declaraction of document.ready() function.
 (function () {
     var ie = !!(window.attachEvent && !window.opera);
@@ -27,7 +28,6 @@
             }, 0);
     };
 })();
-
 
 document.ready(
     // toggleTheme function.
@@ -64,7 +64,7 @@ document.ready(
                 window.localStorage &&
                 window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light',)
             })
-            // moblie
+            // mobile
             document.getElementById('mobile-toggle-theme').addEventListener('click', () => {
                 if (document.getElementsByTagName('body')[0].classList.contains('dark-theme')) {
                     document.getElementsByTagName('body')[0].classList.remove('dark-theme');
@@ -83,6 +83,5 @@ document.ready(
         _Blog.toggleTheme();
 
         // ready function.
-
     }
 );
