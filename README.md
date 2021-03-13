@@ -5,11 +5,11 @@
 主题: https://github.com/Siricee/hexo-theme-Chic
 
 修改: 
-    1、汉化了配置文件及一些标题、内容
-    2、添加联系方式为QQ时点击图标打开QQ对话框
-    3、添加网站访问量统计
+    - 汉化了配置文件及一些标题、内容
+    - 添加联系方式为QQ时点击图标打开QQ对话框
+    - 添加网站访问量统计
     
 **注意**: 其中部分目录文件数过多无法上传，因此使用压缩(zip) 以减少文件数量。使用前需将下列文件在相应目录下解压。
-    1、/node_modules.zip
-    2、/themes/hexo-theme-Chic/source/css.zip
-    3、/themes/hexo-theme-Chic/source/fonts.zip
+    - /node_modules.zip
+    - /themes/hexo-theme-Chic/source/css.zip
+    - /themes/hexo-theme-Chic/source/fonts.zip
